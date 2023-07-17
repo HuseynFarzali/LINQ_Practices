@@ -81,6 +81,7 @@
             foreach (var numberGroup in numberGroups)
             {
                 Console.WriteLine($"Number {numberGroup.Self} appears {numberGroup.Frequency} time(s)");
+                Console.WriteLine(numberGroup.GetType());
             }
         }
 
@@ -228,9 +229,21 @@
             Console.WriteLine();
         }
 
+        static void Task28()
+        {
+            List<string> list = new List<string>() { "Roma", "Paris", "Barselona", "Lisbon", "Baki"};
+
+            var filtered = list.OrderBy(seher => seher.Length).ThenBy(seher => seher).ToArray();
+
+            foreach (var item in filtered)
+            {
+                Console.WriteLine(item);
+            }
+        }
+
         static void Main(string[] args)
         {
-            Task11();
+            Task4();
         }
     }
 }
